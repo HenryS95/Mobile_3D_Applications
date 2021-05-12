@@ -1,0 +1,18 @@
+[
+       
+        {
+            "modelName" : "SmartWater",
+            "modelTitle" : "SmartWater Modelling Process",
+            "modelDescription": "My SmartWater bottle was modelled in Cinema 4D by editing a cylinder using a background reference. The models were developed with a low polygon count as specified. Specular Phong shading was used, though unfortunately it is hard to make it out on the clear transparent bottle materials.  A cylindrical cloner was used on a rudimentary capsule shape to create the grip on the bottle cap. A PNG label material was created with an alpha channel to ensure transparency. This label was UV mapped onto a duplicate bottle object that was slightly larger than the main bottle object so it was visible in the VRML2 export. The VRML2 file was then converted to X3D using the instantreality transcoders. Cinema 4D has no equivalent to 3DS Max's VRML helpers so the X3D interaction information was coded into the file by referencing X3DOM tutorials and adapting code from the Live Feedback site."
+        },
+        {
+            "modelName" : "SchweppesTonic",
+            "modelTitle" : "Schweppes Tonic Modelling Process",
+            "modelDescription": "My Schweppes Tonic bottle was modelled in Cinema 4D by editing a cylinder using a background reference. The models were developed with a low polygon count as specified. Specular Phong shading was also used on the Schweppes bottle and I encountered the same issues due to the bottles colourless transparent material. I believe this is due to a limitation with VRML2, Cinema 4D's only VRML export type. To create the lid, and map the labels, I used the same process as the SmartWater bottle. The VRML2 file was then converted to X3D using the instantreality transcoders. As with the other models, I also added more polygons and photorealistic textures so I could render out stills which were masked in photoshop and merged with coloured splash images and also displayed individually in the model pages. Limitations with Cinema 4D export functions also applied to my Appletiser model."
+        },
+        {
+            "modelName" : "Appletiser",
+            "modelTitle" : "Appletiser Modelling Process",
+            "modelDescription": "My Appletiser bottle was modelled in  4D by editing a cylinder using a background reference. The models were developed with a low polygon count as specified. Specular Phong shading was used, which is more visible on the coloured Appletiser bottle. I could have increased the amount of specular reflections but, because of the low polygon count, it caused the textures to flicker as the bottle rotated. To model the lid, and map the label, I used the same process as the other models. To create the nutritional information label I took a photo of an Appletiser label and then cropped it in Photoshop. The VRML2 file was then converted to X3D using the instantreality transcoders. Cinema 4D has no equivalent to 3DS Max's VRML helpers so the X3D interaction information was coded into the file by referencing X3DOM tutorials and adapting code from the Live Feedback site."
+        }
+]

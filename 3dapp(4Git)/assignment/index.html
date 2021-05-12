@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!--Header Contents-->
+
+<head>
+
+    <!--Js, Popper.js, and jQuery Imports-->
+    
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
+
+    <!--Including x3dom javascript file-->
+    <script type='text/javascript' src='js/x3dom.js'></script>
+    
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+
+    <!--Import custom css for website-->
+   <link rel="stylesheet" href="css/custom.css"/>
+
+    <!--Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import x3dom scripts and stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/x3dom.css"></link>
+
+    <!--Title of the website-->
+    <title>Coca-Cola Brands</title>
+
+    <!--Scripts for the website-->
+    
+    <script type="text/javascript">
+
+
+        function openModel(evt, selected){
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(selected).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        function swap(selected){
+            //Set up initial displays
+            document.getElementById('Home').style.display = 'none';
+            document.getElementById('SmartWater').style.display = 'none';
+            document.getElementById('SchweppesTonic').style.display = 'none';
+            document.getElementById('Appletiser').style.display = 'none';
+            document.getElementById('References').style.display = 'none';
+
+            document.getElementById(selected).style.display = 'block';
+            if(selected == 'Models'){
+                document.getElementById('tabbar').setAttribute('style', 'block');
+   
+            }else if (selected == 'References') {
+                document.getElementById('referenceTab').setAttribute('style', 'block');
+            }
+
+        }
+
+        
+    </script>
+</head>
+
+<!--End of Header Contents-->
+
+<!--Body Contents-->
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-expand-xl bg-secondary sticky-top" id="mynavbar" >
+        <div class="container-fluid">
+            <!--Logo for the website-->
+           
+            <div class="logo">
+                <a class="navbar-brand" href="index.html">
+                <h1>1</h1>
+                <h1>o</h1>
+                <h2>ca</h2>
+                <h3>Co</h3>
+                <h4>la</h4>
+                <h6>brands</h6>
+                </a>
+            </div>
+
+            <!--Toggler for smaller screens-->
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbaritems">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!--Other links for main pages of the website-->
+            <div class="collapse navbar-collapse" id="navbaritems">
+                 <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item">
+                        <a id="homeBtn" onclick="swap('Home');" class="nav-link" type="button">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a onclick="swap('SmartWater');"  class="nav-link" type="button">SmartWater</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a onclick="swap('SchweppesTonic');"  class="nav-link" type="button">Schweppes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a onclick="swap('Appletiser');"  class="nav-link" type="button">Appletiser</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a onclick="swap('References');" class="nav-link" type="button">References</a>  
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="assets/download/Model_Archives_(webpage).zip" class="nav-link" type="button" download>Download</a>  
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav><!--End of navbar -->
+
+    <!--Home page contents-->
+    <div id="Home">
+
+        <!--Home page image slider-->
+        <div id="slides" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <!--Slide indicator for the image slideshow-->
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+                <li data-target="#slides" data-slide-to="3"></li>
+            </ul>
+            <!--images for the image slideshow-->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+
+                    <img src="assets/images/homepageimages/Smart_Bottle_Splash.jpg" height="100">
+    
+                    <!--Objects placed on top of images-->
+                    <div class="carousel-caption">
+                        <h1 class="display-2" >SmartWater: a vapour-distilled British spring water produced and bottled in Morpeth, Northumberland.</h1>  
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="assets/images/homepageimages/Tonic_Water_Splash.jpg" height="100">
+
+                    <!--Objects placed on top of images-->
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Schweppes Tonic: a bright and effervescent quality for 230 years. </h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="assets/images/homepageimages/Appletiser_Splash.jpg" height="100">
+
+                    <!--Objects placed on top of images-->
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Appletiser: an expertly crafted unique blend of sparkling 100% apple juice.</h1>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="assets/images/homepageimages/CocaCola_Splash.jpg" height="100">
+
+                    <!--Objects placed on top of images-->
+                    <div class="carousel-caption">
+                        <h1 class="display-2">Coca-Cola: the original.</h1>
+                    </div>
+                </div>
+                
+            </div><!--End of the image slideshow-->
+
+        </div>
+      
+    </div><!--End of Home Page contents-->
+
+        <!--Model page for Smart Water Bottle-->
+        
+        <div id="SmartWater" class="tabcontent">
+
+            <!--LOGO-->
+
+            <div class= "row">
+                <div class="col-lg-2 col-centered">
+                        <img class="card-img-top img-thumbnail" src="assets/images/logos/SmartWater_Logo.jpg"></a>
+                </div>
+            </div>
+
+            <hr class="light-100">
+
+            <!--X3D-->
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="card text-left">
+                            <div class="card-header gallery-header">
+                                <h1 class="nav-link active" >Interactive 3D Model </h1>
+                                    <div class="animation">
+                                        <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="animation('smartWater');">Spin Start/Stop</button>
+                                    </div>
+                            </div>          
+                            <div class="model3D">
+                                    <x3d id="smartWater" width="100%" height="400px">
+                                        <scene>
+                                            <inline nameSpaceName="smartWater" mapDEFToID="true" url="assets/models/SmartWater.x3d" />
+                                        </scene>
+                                    </x3d>
+                            </div>
+                        </div>
+
+                    <!--Group buttons, used to operate on the SMART WATER model-->
+                    
+                        <hr class="light-100">
+                        
+                        <div class="col-12 btn-group">
+                            
+                            <div class="wireframe">
+                                <h2>Wireframe</h2>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="wireframe('smartWater');">Wireframe</button>
+                            </div>  
+
+                            <div class="camera">
+                                <h2>Camera</h2>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="bottomCamera('smartWater');">Bottom</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="topCamera('smartWater');">Top</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="frontCamera('smartWater');">Default</button>
+                            </div>
+
+                            <div class="lighting">
+                                <h2>Lighting Toggles</h2>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="leftLight('smartWater');">Left</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="rightLight('smartWater');">Right</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="frontLight('smartWater');">Front</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="backLight('smartWater');">Back</button>
+                                <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="defaultLighting('smartWater');">Default</button>
+                            </div>
+                                
+                        </div>
+                        
+                        <br>
+                        
+                        <hr class="light-100"> 
+
+                    <!--End of 3D model group buttons-->
+                                
+                    <!---Model Process infomation collected by JSON and AJAX--> 
+                    
+                    <div class="row">
+                        <div class="col-sm-12">
+                           <div class="card">
+                               <div class="card-body">
+                                   <div class="container-fluid text-padding">
+                                        <div class="text-left col-12">
+                                             <div id="SmartWaterProcessTitle"></div>                               
+                                                <br>
+                                                <a href="https://www.coca-cola.co.uk/brands/glaceau-smartwater" class="btn btn-primary btn-responsive btn-sm">More from SmartWater...</a>
+                                        </div>
+                                    </div>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                    <!---End of model process info-->
+
+
+                    <!--Slideshow Smart water types images--> 
+
+                    <hr class="light-100"> 
+
+                    <div id="slides" class="carousel slide" data-ride="carousel">                     
+                        <!--images for the image slideshow--> <!--not editable to emphasise button interactions-->
+                        <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/images/referenceImages/SM_PHOTOREALISTIC_RENDER.jpg" height="100">
+                        
+                                    <!--Objects placed on top of images-->
+                                    <div class="carousel-caption">
+                                        <h1 class="display-2">C4D render with photorealistic textures and an increased polygon count</h1>     
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/referenceImages/SM_Sparkling.jpg" height="100">
+                                    <!--Objects placed on top of images-->
+                                    <div class="carousel-caption">
+                                        <h1 class="display-2"></h1>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/referenceImages/SM_Alkaline.jpg" height="100">
+                                    <!--Objects placed on top of images-->
+                                    <div class="carousel-caption">
+                                        <h1 class="display-2"></h1>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/images/referenceImages/SM_Antioxident.jpg" height="100">
+                                    <!--Objects placed on top of images-->
+                                    <div class="carousel-caption">
+                                        <h1 class="display-2"></h1>
+                                    </div>
+                                </div>
+                       </div>
+                   </div>
+                    
+                    <hr class="light-100"> 
+
+                    <!--End of the slideshow-->
+
+               <!-- Photorealistic Render -->
+               </div>
+                    <div class="col-sm-4">
+                        <div class="card text-left">
+                                <div class="card-header gallery-header">
+                                        <h1 class="nav-link active" >3D Render</h1>
+                                </div>
+                                <div class="card-body">
+                                        <img class="card-img-top img-thumbnail" src="assets/images/gallery_images/SmartWaterPHOTOREALISTICV2HOMESCREEN_noGL0001.jpg"></a>
+                                </div>
+                        </div> <!-- End gallery card -->
+                    </div>
+                </div>           
+        </div><!--End of model page for Smart Water Bottle-->
+        
+        <!--Model page for Schweppes Bottle-->
+        
+        <div id="SchweppesTonic" class="tabcontent">
+
+            <!--LOGO-->
+            
+            <div class= "row">
+                <div class="col-lg-2 col-centered">
+                        <img class="card-img-top img-thumbnail" src="assets/images/logos/Schweppes_Logo.jpg"></a>
+                </div>
+            </div>
+
+            <hr class="light-100">
+            <!--X3D-->  
+            <div class="row">
+                <div class="col-sm-8">
+                            <div class="card text-left">
+                                <div class="card-header gallery-header">
+                                        <h1 class="nav-link active" >Interactive 3D Model </h1>
+                                        <div class="animation">
+                                            <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="animateSchweppes();">Spin Start/Stop</button>
+                                        </div>
+
+                                </div>       
+                                    <div class="model3D">            
+                                            <x3d id="schweppesTonic" width="100%" height="400px">
+                                                <scene>
+                                                    <inline nameSpaceName="schweppesTonic" mapDEFToID="true" url="assets/models/SchweppesTonic.x3d" />
+                                                </scene>
+                                            </x3d> 
+                                    </div>
+                            </div>
+                
+                            <!--Group buttons, used to operate on the TONIC model-->
+
+                            <hr class="light-100">
+                            
+                            <div class="col-12 btn-group">
+
+                                <div class="wireframe">
+                                    <h2>Wireframe</h2>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="wireframe('schweppesTonic');">Wireframe</button>
+                                </div> 
+
+                                <div class="camera">
+                                    <h2>Camera</h2>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="bottomCamera('schweppesTonic');">Bottom</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="topCamera('schweppesTonic');">Top</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="frontCamera('schweppesTonic');">Default</button>
+                                </div>
+
+                                <div class="lighting">
+                                    <h2>Lighting Toggles</h2>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="leftLight('schweppesTonic');">Left</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="rightLight('schweppesTonic');">Right</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="frontLight('schweppesTonic');">Front</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="backLight('schweppesTonic');">Back</button>
+                                    <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="defaultLighting('schweppesTonic');">Default</button>
+                                </div>                              
+                    
+                            </div>
+                            <br>
+                            
+                            <hr class="light-100">
+                        
+                             <!--End of 3D model group buttons-->
+
+                    <!---Model Process infomation collected by JSON and AJAX--> 
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="container-fluid text-padding">
+                                            <div class="text-left col-12">
+                                                <div id="SchweppesTonicProcessTitle"></div>
+                                                <br>
+                                                <a href="https://www.coca-cola.co.uk/brands/schweppes-classic" class="btn btn-warning btn-responsive btn-sm">More from Schweppes...</a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+ 
+                    <!--End of the JSON-->
+
+                    <hr class="light-100">
+
+                    <!--Slideshow Schweppes Vibe images-->
+                    <div id="slides" class="carousel slide" data-ride="carousel">
+                        <!--images for the image slideshow--> <!--not editable to emphasise button interactions-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/referenceImages/SchweppesTonic_PHOTOREALISTIC.jpg" height="100">
+                            
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2">C4D render with photorealistic textures and an increased polygon count</h1>     
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Schweppes_Vibes.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Schweppes_Logo.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Schweppes_Highres.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="light-100">
+
+               <!-- Photorealistic Render -->
+               </div>
+                    <div class="col-sm-4">
+                        <div class="card text-left">
+                                <div class="card-header gallery-header">
+                                        <h1 class="nav-link active" >3D Render</h1>
+                                </div>
+                                <div class="card-body">
+                                        <img class="card-img-top img-thumbnail" src="assets/images/gallery_images/SchweppesTonic_PHOTOREALISTIC_no_glV2_0001.jpg"></a>
+                                </div>
+                        </div> <!-- End gallery card -->
+                    </div>
+                </div>  
+
+        </div><!--End of model page for Shweppes Bottle-->
+
+        <!--Model page for Appletiser Bottle-->      
+        <div id="Appletiser" class="tabcontent">
+
+            <!--LOGO-->
+            
+            <div class= "row">
+                <div class="col-lg-2 col-centered">
+                        <img class="card-img-top img-thumbnail" src="assets/images/logos/Appletiser_Logo.jpg"></a>
+                </div>
+            </div>
+
+            <hr class="light-100">
+            <!--X3D-->
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="card text-left">
+                            <div class="card-header gallery-header">
+                                    <h1 class="nav-link active" >Interactive 3D Model </h1>
+                                    <div class="animation">
+                                        <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="animateappletiser();">Spin Start/Stop</button>
+                                    </div>
+                            </div>       
+                            <div class="model3D">                 
+                                <x3d id="appletiser" width="100%" height="400px">
+                                    <scene>
+                                        <inline nameSpaceName="appletiser" mapDEFToID="true" url="assets/models/Appletiser.x3d" />
+                                    </scene>
+                                </x3d> 
+                           </div>
+                    </div>
+                    
+                <!--Group buttons, used to operate on the 3D model-->
+                    <hr class="light-100">
+
+                    <div class="col-12 btn-group">
+                        
+                        <div class="wireframe">
+                            <h2>Wireframe</h2>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="wireframe('appletiser');">Wireframe</button>
+                        </div>
+
+                        <div class="camera">
+                            <h2>Camera</h2>
+                            
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="bottomCamera('appletiser');">Bottom</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="topCamera('appletiser');">Top</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="frontCamera('appletiser');">Default</button>
+                            
+                        </div> 
+
+                        <div class="lighting">
+                            <h2>Lighting Toggles</h2>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="leftLight('appletiser');">Left</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="rightLight('appletiser');">Right</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="frontLight('appletiser');">Front</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="backLight('appletiser');">Back</button>
+                            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="defaultLighting('appletiser');">Default</button>
+                        </div>
+                        
+                    </div>
+
+                    <hr class="light-100">
+                <!--End of 3D model group buttons-->
+
+                    <!---Model Process infomation collected by JSON and AJAX--> 
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="container-fluid text-padding">
+                                            <div class="text-left col-12">
+                                                <div id="AppletiserProcessTitle"></div>
+                                                <br>
+                                                <a href="https://www.coca-cola.co.uk/brands/appletiser" class="btn btn-success btn-responsive btn-sm">More from Appletiser...</a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                    
+                    <hr class="light-100">
+
+                    <!--Slideshow Appletiser vibe images-->
+                    <div id="slides" class="carousel slide" data-ride="carousel">
+                        <!--images for the image slideshow--> <!--not editable to emphasise button interactions-->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/referenceImages/Appletiser_PHOTOREALISTIC.jpg" height="100">
+                                
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2">C4D render with photorealistic textures and an increased polygon count</h1>     
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Appletiser_LogoMain.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Appletiser_Bottle.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/referenceImages/Appletiser_SplashApple.jpg" height="100">
+                                <!--Objects placed on top of images-->
+                                <div class="carousel-caption">
+                                    <h1 class="display-2"></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End of the  slideshow-->
+
+                    <hr class="light-100">
+
+                <!-- Photorealistic Render -->
+            </div>
+                <div class="col-sm-4">
+
+                    <div class="card text-left">
+                            <div class="card-header gallery-header">
+                                    <h1 class="nav-link active" >3D Render</h1>
+                            </div>
+                            <div class="card-body">
+                                    <img class="card-img-top img-thumbnail" src="assets/images/gallery_images/Appletiser_Splash_HIgh_Res_Bottle.jpg"></a>
+                            </div>
+                    </div> <!-- End gallery card -->
+                </div>
+            </div>  
+
+        </div><!--End of model page for Appletiser-->
+        
+
+    
+    <!--Referencing contents-->
+    <div id="References">
+
+        <!-- Tab links -->
+        <div id="referenceTab" class="tab" style="display: none;">
+            <button class="tablinks" onclick="openModel(event,'AllReference')">General</button>
+            <button class="tablinks" onclick="openModel(event,'HomePageReference')">Home Page</button>
+            <button class="tablinks" onclick="openModel(event,'SmartWaterReference')">SmartWater</button>
+            <button class="tablinks" onclick="openModel(event,'SchweppesTonicReference')">Schweppes Tonic</button>
+            <button class="tablinks" onclick="openModel(event,'AppletiserReference')">Appletiser</button>
+        </div>
+
+        <div id="AllReference" class="tabcontent all">
+            <div class="container-fluid text-padding">
+                <div class="text-left col-12">
+                    <hr class="light-100">
+                    <h1>General Referencing</h1>
+                    <hr class="light-100">
+                    
+                    <a href="https://www.w3schools.com/html/html_css.asp">W3Schools CSS - used for styling</a><br>
+                    <a href="https://www.w3schools.com/html/">W3Schools HTML5 - used for website</a><br>
+                    <a href="https://www.fontspace.com/category/nice">Logo Font</a><br>
+
+                    <h2></h2> This webpage includes adapted code from the following sources:</h2><br>
+                    <br>
+
+                    <a href="https://doc.x3dom.org/tutorials/index.html">X3DOM tutorials allowed for the addition of camera, animation and lighting information in my VRML2 exports from Cinema 4D</a><br>
+                    <a href="https://benskitchen.com/x3dom.php">Adapted javascript from benskitchen allowed model interations with my X3D models</a><br>
+                    <a href="http://users.sussex.ac.uk/~martinwh/3dapp/labs/">Live feedback site for the 3dapp module labs (Adapted X3D, HTML and CSS CocaCola Logo has been included from this source) </a><br>
+                    <a href="https://www.youtube.com/watch?v=rJesac0_Ftw&t=804s&ab_channel=LearnWebCode">JSON and AJAX has been developed with information from this source and the Lab tutorials</a><br>
+                    <a href="https://www.youtube.com/watch?v=9cKsq14Kfsw">Responsive Bootstrap Website with Bootstrap 4, HTML5 & CSS3 (Adapted HTML and CSS has been included from this source) </a><br>
+                    <br>
+
+                    <hr class="light-100">
+                    <h1>Github</h1>
+                    <hr class="light-100">
+
+                    <a href="https://github.com/HenryS95/Mobile_3D_Applications">Link to github repository</a><br>
+
+                    <hr class="light-100">
+                    <h1>Reflections</h1>
+                    <hr class="light-100">
+
+                    <div class="row">
+                     <div class="col-sm-12">
+                       <div class="card">
+                         <div class="card-body">
+                           <p class="card-text"> Having started this module with zero experience in any of the languages required and only a brief experience with C#, I am pleased with my work. However, as I’m sure you’re aware, not all the requirements of the mark scheme have been met. Notably, my site is not structured in an MVC format. Due to my inexperience, and the time it took to develop a new workflow for using Cinema4D, I was not able to achieve a functioning MVC structure in time. Finding relevant information about X3D’s functionality was particularly challenging. The X3DOM tutorial site was useful but it did not cater to my specifics requirements. This meant I spent a lot of time trying to join the dots between various sources. I hope that the work I have provided reflects the extent of time troubleshooting to achieve the other main requirements of this module.</p>
+                         </div>
+                        </div>
+                     </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="HomePageReference" class="tabcontent all">
+            <div class="container-fluid text-padding">
+                <div class="text-left col-12">
+                    <hr class="light-100">
+                    <h1>Referencing for Home Page</h1>
+                    <hr class="light-100">
+                    <a href="https://www.pngitem.com/so/water-splashes/">Water splashes, coloured in photoshop and merged with my Cinema4D photorealstic renders (Excluding the Coca Cola bottle).</a><br>
+                    <a href="https://www.vhv.rs/viewpic/hbmbibJ_coca-cola-iconic-bottle-hd-png-download/">Coca Cola bottle PNG.</a><br>
+                    <a href="https://png.pngitem.com/pimgs/s/414-4141676_png-image-free-drops-images-download-transparent-background.png">Coca Cola bottle splash PNG.</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div id="SmartWaterReference" class="tabcontent all">
+            <div class="container-fluid text-padding">
+                <div class="text-left col-12">
+                    <hr class="light-100">
+                    <h1>Referencing for Smartwater Page</h1>
+                    <hr class="light-100">
+                    <a href="https://www.coca-colacompany.com/content/dam/journey/us/en/brands/smartwater/smartwater-sparkling-282x700.png">SmartWater Sparkling carousel image.</a><br>
+                    <a href="https://www.pngarea.com/pngm/318/2513226_coca-cola-bottle-png-smartwater-antioxidant-png-download.png">SmartWater Antioxident carousel image.</a><br>
+                    <a href="https://www.pngkey.com/png/full/426-4269940_smartwater-alkaline.png">SmartWater Alkaline carousel image.</a><br>
+                    <a href="https://as2.ftcdn.net/v2/jpg/00/67/20/77/1000_F_67207752_zUnKDG6rmqYoeYTOtw2nf30tdPysKal9.jpg">SmartWater splash image.</a><br>
+                    <a href="https://static.wikia.nocookie.net/logopedia/images/2/20/Smartwater_old.png/revision/latest?cb=20200702162816">SmartWater logo.</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div id="SchweppesTonicReference" class="tabcontent all">
+            <div class="container-fluid text-padding">
+                <div class="text-left col-12">
+                    <hr class="light-100">
+                    <h1>Referencing for Schweppes Tonic Page</h1>
+                    <hr class="light-100">
+                    <a href="https://www.pngitem.com/middle/Txiiho_fish-air-water-pump-aquarium-bottle-splashes-clipart/">Splash image for photoshopped images in the Schweppes page.</a><br>
+                    <a href="https://img.favpng.com/25/11/22/gin-and-tonic-tonic-water-vodka-tonic-grey-goose-png-favpng-JURvsHcSxhwidFVEZKdXUNqpA.jpg">Schweppes Tonic glass PNG.</a><br>
+                    <a href="https://favpng.com/png_view/fountain-carbonated-water-schweppes-beer-fizzy-drinks-logo-png/7ucieQQc">Schweppes Tonic Logo PNG.</a><br>
+                    <a href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/a5706577059121.5c7cd6b0801b4.jpg">Schweppes Tonic Aromatic taste red JPG.</a><br>
+                    <a href="https://i.pinimg.com/originals/59/20/7b/59207bdb228eb2091ade30a470d81c8d.jpg">Schweppes Tonic Jazzy Ginger green JPG.</a><br>
+                    <a href="https://mir-s3-cdn-cf.behance.net/project_modules/1400/4d424477059121.5cadb8b7aa009.jpg">Schweppes Tonic Citrus taste purple green JPG.</a><br>
+                    <a href="https://i.pinimg.com/originals/89/cb/37/89cb37139427a5bb3c33d314fc4a88b3.jpg">Schweppes logo.</a><br>
+                </div>
+            </div>
+        </div>
+
+        <div id="AppletiserReference" class="tabcontent all">
+            <div class="container-fluid text-padding">
+                <div class="text-left col-12">
+                    <hr class="light-100">
+                    <h1>Referencing for Appletiser Page</h1>
+                    <hr class="light-100">
+                    <a href="https://cdn-b.william-reed.com/var/wrbm_gb_hospitality/storage/images/2/9/0/7/1447092-3-eng-GB/Coca-Cola-Enterprises-Ltd-IR-MA-Hospitality-2014-Enter-your-details-here-for-a-chance-to-win_wrbm_large.jpg">Appletiser Logo.</a><br>
+                    <a href="https://mir-s3-cdn-cf.behance.net/project_modules/fs/68db7954517893.595e74eb3a532.jpg">Appletiser apple splash JPG.</a><br>
+                    <a href="https://png.pngitem.com/pimgs/s/6-66188_transparent-water-splash-background-clipart-transparent-background-water.png">Appletiser water splash.</a><br>
+                    <a href="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRz8Igz_ho90-CwEIuF-YZivw0DEWymJ_HrfI7Ja_cbXAYBEtBcOeTCuluf9eBVJZQfFu7KAk9jk80qGP5HEVHIuISmimpuBPCGmglsyUE&usqp=CAE">Appletiser Bottle</a><br>
+                </div>
+            </div>
+        </div>
+
+
+    </div><!--End of referencing contents-->
+
+    <!--Restyle tab and Footer-->
+
+    <script>
+
+        //Function to change webpage background colour
+        function changeBodyBg(color){
+        document.body.style.background= colour;
+        }
+    
+        //Function to change heading background colour
+        function changeHeadingBg(colour){
+        document.getElementById("colourrestyle").style.background = colour;
+        }
+    
+    </script>
+
+        <div class="container-fluid-buttons-padding">
+                      
+                    <!--<img class="logoPic" src="assets/images/homepageimages/Logo.png">-->
+                    <!--<h3></h3>-->
+                          
+        <div class="button-list">
+            <Label> Restyle to:</Label>
+            <button type="button" class="btn btn-primary btn-responsive btn-sm" onclick="changeHeadingBg('#024bac');">Blue</button>
+            <button type="button" class="btn btn-warning btn-responsive btn-sm" onclick="changeHeadingBg('#fdc200');">Yellow</button>
+            <button type="button" class="btn btn-success btn-responsive btn-sm" onclick="changeHeadingBg('#009623');">Green</button>
+            <button type="button" class="btn btn-danger btn-responsive btn-sm" onclick="changeHeadingBg('#bd0309');">Red</button>
+            <button type="button" class="btn btn-light btn-responsive btn-sm" onclick="changeHeadingBg('#fbfcfc');">Default</button>
+        </div>
+            
+        </div>                  
+    
+    <div class="container-fluid-padding" id="colourrestyle">
+        <div class="row text-center">
+            <div class="col-md-1">
+                
+                <!--socials-->
+
+                <div class="col-12 padding media">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<!---End of restyle and footer-->
+
+<!--End of Body Contents-->
+ 
+<!--Include the boostrap file-->
+ <script src="js/bootstrap.js"></script>
+
+ <!--Include the jquery file-->
+ <script src="js/jquery-3.1.1.js"></script>
+ 
+<!--Link for the model operations-->
+<script src="js/modeloperations.js"></script>
+
+<!-- JSON  -->
+
+<script src="js/getJsonData.js"></script>
+
+</html>

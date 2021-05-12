@@ -1,0 +1,578 @@
+
+html, body {
+    height: 100%;
+    width: 100%;
+    /*color: #5da59d484;*/
+
+
+}
+
+/* Fonts, thicker for emphasis on interactive buttons etc */
+
+
+@font-face {
+    font-family: cocaColaFont;
+    src: url(../assets/fonts/loki_cola/LOKICOLA.TTF);
+}
+
+@font-face {
+    font-family: Gotham;
+    src: url(../assets/fonts/Gotham-Light.otf);
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../assets/fonts/Gotham_Medium_Regular.ttf);
+}
+
+ h1, h2, h3, h4, h6, p {
+    font-family: 'Gotham', sans-serif;
+}
+
+button, a, h5, h6 {
+    font-family: 'GothamMedium', sans-serif;
+}
+
+/* LOGO - Adapted from live Feedback site  */
+
+.logo {
+    margin-top: 8px;
+    }
+    
+    .logo h1 {
+    font-family: cocaColaFont; 
+    font-size: 50px;
+    color: #024bac;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+    
+    }
+    
+    .logo h2 {
+    font-family: cocaColaFont;
+    font-size: 50px;
+    color: #fdc200;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+    }
+
+    .logo h3 {
+    font-family: cocaColaFont;
+    font-size: 50px;
+    color: #009623;
+    margin-top: 0px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+    }
+
+    .logo h4 {
+    font-family: cocaColaFont;
+    font-size: 50px;
+    color: #bd0309;
+    margin-top: 0px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+    }
+    
+    /*.logo h5 {
+    font-size: 20px;
+    color: #c5c3c3;
+    margin-top: 18px;
+    margin-bottom: -5px;
+    padding-top: 0px;
+    padding-left: 6px;
+    float: left;
+    }*/
+
+    .logo h6 {
+        font-size: 20px;
+        color: #c5c3c3;
+        margin-top: 18px;
+        margin-bottom: -5px;
+        padding-top: 0px;
+        padding-left: 4px;
+        float: left;
+        }
+    
+
+
+x3d {
+    background-color: #dfdfe8;
+}
+
+hr.light-100 {
+    border-top: 8px solid #dfdfe8;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+/*centers logo*/
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+/* ///carousel// */
+
+.carousel button {
+    position: absolute;
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption h1 {
+    font-size: 160%;
+    text-transform: inheritcase;
+    color: #343a40;
+    text-shadow: 1px 1px 5px #ffffff;
+    padding-bottom: 1rem;
+}
+
+
+footer {
+    background-color: #6c757d;
+    color: #fbfcfc;
+    padding-top: 1.7rem;
+    /*padding-left: 1rem;*/
+    width: 100%;
+}
+
+
+.container-fluid-buttons-padding {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.7rem;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-list {
+    display: inline-block;
+    padding-left: 0.5rem;
+}
+
+.padding {
+    text-align: center;
+}
+
+/* RESPONSIVE MEDIA */
+
+
+.media a {
+    font-size: 3em;
+    padding: 5rem;
+    padding-left: 1.7rem;
+    /*padding-top: 0rem;
+    padding-bottom: 0.9rem;*/
+}
+
+.fa-facebook {
+    color: #6c757d;
+}
+
+.fa-twitter {
+    color: #6c757d;
+}
+
+.fa-google-plus-g {
+    color: #6c757d
+}
+
+.fa-instagram {
+    color: #6c757d;
+}
+
+.fa-youtube {
+    color: #6c757d;
+}
+
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+    color: #d8d8de;
+}
+
+
+@media (max-width: 992px) {
+
+    .media a {
+        font-size: 3em;
+        padding: 2rem;
+        padding-left:0.1rem;
+    }
+    
+    .fa-facebook {
+        color: #6c757d;
+    }
+    
+    .fa-twitter {
+        color: #6c757d;
+    }
+    
+    .fa-google-plus-g {
+        color: #6c757d
+    }
+    
+    .fa-instagram {
+        color: #6c757d;
+    }
+    
+    .fa-youtube {
+        color: #6c757d;
+    }
+    
+    
+    
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-google-plus-g:hover,
+    .fa-instagram:hover,
+    .fa-youtube:hover {
+        color: #dddddd;
+    }
+
+    .wireframe button,
+    .camera button,
+    .animation button,
+    .lighting button,
+    .texture button {
+        font-size: 20px;
+        padding: .3rem;
+    }
+  
+}
+
+@media (max-width: 768px) {
+    
+    .carousel-caption {
+        top: 32%;
+        
+    }
+    
+    .carousel-caption h1 {
+        font-size: 130%;
+    }
+
+    .media a {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+    
+    .fa-facebook {
+        color: #6c757d;
+    }
+    
+    .fa-twitter {
+        color: #6c757d;
+    }
+    
+    .fa-google-plus-g {
+        color: #6c757d;
+    }
+    
+    .fa-instagram {
+        color: #6c757d;
+    }
+    
+    .fa-youtube {
+        color: #6c757d;
+    }
+    
+    
+    
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-google-plus-g:hover,
+    .fa-instagram:hover,
+    .fa-youtube:hover {
+        color: #cacaca;
+    }
+
+    .wireframe button,
+    .camera button,
+    .animation button,
+    .lighting button,
+    .texture button {
+        font-size: 17px;
+        padding: .2rem;
+    }
+
+    .wireframe h2,
+    .camera h2,
+    .animation h2,
+    .lighting h2,
+    .texture h2 {
+        font-size: 26px;
+        
+    }
+
+    .text-padding h1 {
+        font-size: 25px;
+        padding: .2rem;
+    }
+
+    .text-padding h4 {
+        font-size: 20px;
+    }
+
+    .text-padding p {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    
+    .carousel-caption {
+        top: 30%;
+        
+    }
+    
+    .carousel-caption h1 {
+        font-size: 100%;
+    }
+
+    .media a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+    
+    .fa-facebook {
+        color: #6c757d;
+    }
+    
+    .fa-twitter {
+        color: #6c757d;
+    }
+    
+    .fa-google-plus-g {
+        color: #6c757d;
+    }
+    
+    .fa-instagram {
+        color: #6c757d;
+    }
+    
+    .fa-youtube {
+        color: #6c757d;
+    }
+    
+    
+    
+    .fa-facebook:hover,
+    .fa-twitter:hover,
+    .fa-google-plus-g:hover,
+    .fa-instagram:hover,
+    .fa-youtube:hover {
+        color: #dddddd;
+    }
+
+    .wireframe button,
+    .camera button,
+    .animation button,
+    .lighting button,
+    .texture button {
+        font-size: 10px;
+        padding: .15rem;
+    }
+
+    .wireframe h2,
+    .camera h2,
+    .animation h2,
+    .lighting h2,
+    .texture h2 {
+        font-size: 17px;
+        padding: .2rem;
+    }
+
+    .text-padding h1 {
+        font-size: 17px;
+        padding: .2rem;
+    }
+
+    .text-padding h4 {
+        font-size: 13px;
+    }
+
+    .text-padding p {
+        font-size: 10px;
+    }
+}
+
+
+
+/* Styling for the navbar
+ */
+
+ .nav-item {
+    font-size: small;
+}
+
+ .navbar {
+    padding: 0.99rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 1.0rem;
+}
+.navbar-nav li {
+    padding-right: 30px;
+}
+
+.nav-link {
+    font-size: 1.5em !important;
+}
+
+.logoPic {
+    width: 70px;
+    height: 50px;
+}
+
+.website-logo-footer {
+    padding-left: 1.7rem;
+}
+
+.website-logo h3 {
+    font-family: Sunflower;
+    font-size: 35px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    padding-bottom: 1rem;
+    padding-left: 0.7rem;
+}
+
+footer h3 {
+    color: #fbfcfc;
+    margin-top: 20px;
+}
+
+footer img {
+    float: left;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 20px solid #ffffff59d;
+    background-color: #dfdfe8;
+}
+  
+/* Style the buttons that are used to open the tab content */
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 28px 100px;
+    transition: 0.3s;
+}
+
+.tab button {
+    font-size: 20px;
+    color: #0f59ec;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ffffff;
+}
+  
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(255 255 255);
+}
+  
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 13px 12px;
+    border: 1px solid #c0c1ca;
+    border-top: none;
+}
+
+.tabcontent x3d{
+    border-radius: 0px;
+    border-color: white;
+}
+
+.camera,
+.lighting,
+.animation,
+.texture {
+    padding-left: 30px;
+}
+
+.wireframe button {
+    background-color: #dedde6;
+    color: #343a40;
+}
+
+.camera button {
+    background-color: #dedde6;
+    color: #343a40;
+}
+
+.animation button {
+    background-color: #dedde6;
+     color: #343a40;
+}
+
+.lighting button {
+    background-color: #dedde6;
+    color: #343a40;
+    
+}
+
+.texture button {
+    background-color: rgb(255 255 255);
+}
+
+
+.wireframe button:hover,
+.camera button:hover,
+.animation button:hover,
+.lighting button:hover,
+.texture button:hover {
+    background-color: rgb(151 153 165)
+}
+
+.text-padding {
+    padding-top: 13px;
+}
